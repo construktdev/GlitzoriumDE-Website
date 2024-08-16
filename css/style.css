@@ -1,0 +1,671 @@
+/*! HTML5 Boilerplate v9.0.1 | MIT License | https://html5boilerplate.com/ */
+
+/* main.css 3.0.0 | MIT License | https://github.com/h5bp/main.css#readme */
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html {
+  color: #222;
+  font-size: 1em;
+  line-height: 1.4;
+  background: white;
+}
+
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+::selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+  vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+  resize: vertical;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Hide visually and from screen readers
+ */
+
+.hidden,
+[hidden] {
+  display: none !important;
+}
+
+/*
+ * Hide only visually, but have it available for screen readers:
+ * https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ *
+ * 1. For long content, line feeds are not interpreted as spaces and small width
+ *    causes content to wrap 1 word per line:
+ *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
+ */
+
+.visually-hidden {
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  /* 1 */
+}
+
+/*
+ * Extends the .visually-hidden class to allow the element
+ * to be focusable when navigated to via the keyboard:
+ * https://www.drupal.org/node/897638
+ */
+
+.visually-hidden.focusable:active,
+.visually-hidden.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  white-space: inherit;
+  width: auto;
+}
+
+/*
+ * Hide visually and from screen readers, but maintain layout
+ */
+
+.invisible {
+  visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * The use of `table` rather than `block` is only necessary if using
+ * `::before` to contain the top-margins of child elements.
+ */
+
+.clearfix::before,
+.clearfix::after {
+  content: "";
+  display: table;
+}
+
+.clearfix::after {
+  clear: both;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+  /* Style adjustments for viewports that meet the condition */
+}
+
+@media print,
+  (-webkit-min-device-pixel-ratio: 1.25),
+  (min-resolution: 1.25dppx),
+  (min-resolution: 120dpi) {
+  /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid the additional HTTP request:
+   https://www.phpied.com/delay-loading-your-print-css/
+   ========================================================================== */
+
+@media print {
+  *,
+  *::before,
+  *::after {
+    background: #fff !important;
+    color: #000 !important;
+    /* Black prints faster */
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
+
+  a[href]::after {
+    content: " (" attr(href) ")";
+  }
+
+  abbr[title]::after {
+    content: " (" attr(title) ")";
+  }
+
+  /*
+   * Don't show links that are fragment identifiers,
+   * or use the `javascript:` pseudo protocol
+   */
+  a[href^="#"]::after,
+  a[href^="javascript:"]::after {
+    content: "";
+  }
+
+  pre {
+    white-space: pre-wrap !important;
+  }
+
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+
+  tr,
+  img {
+    page-break-inside: avoid;
+  }
+
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
+
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
+}
+
+.heading {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  background: white;
+  width: 100%;
+  height: 150px;
+  box-sizing: border-box;
+  margin-left: 0;
+  padding-left: 20px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+}
+
+.top-bar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+
+
+
+.nav {
+  display: inline-block;
+  margin-right: 50px;
+  margin-left: 100px;
+  margin-top: 10px;
+  font-family: 'Arial', sans-serif;
+}
+
+.heading img {
+  margin-left: 90px;
+  padding: 0;
+  line-height: 1.5;
+
+}
+
+.heading p {
+  margin: 0;
+  padding: 0;
+  line-height: 2;
+  font-size: 17px;
+}
+
+.heading a {
+  text-decoration: none;
+  font-size: 16px;
+  color: #333;
+  transition: color 0.1s ease;
+  margin-right: 20px;
+}
+
+.heading a:hover {
+  color: #007bff;
+}
+
+
+
+.header {
+  font-family: 'Arial', sans-serif;
+  font-size: 18px;
+  padding: 0;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.register-button {
+  margin-top: 15px;
+  text-align: center;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-right: 10px;
+  width: 120px;
+  height: 35px;
+}
+
+.register-button:hover {
+  background-color: #bfbfbf;
+}
+
+.login-button {
+  text-align: center;
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-right: 10px;
+  background: #56bbff;
+  width: 120px;
+  display: flex;
+  align-items: flex-end;
+  height: 35px;
+}
+
+.login-button:hover {
+  background-color: #217ab8;
+}
+
+.title {
+  font-family: 'Arial', sans-serif;
+  font-weight: bold;
+  font-size: 35px;
+  margin-top: 100px;
+}
+
+.info-box-conatiner {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 100px;
+}
+
+.info-box {
+  margin-left: 30px;
+  margin-right: 30px;
+  border-radius: 20px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+  height: 400px;
+  width: 350px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: 0.3s;
+}
+
+.info-box h3 {
+  font-family: "JetBrains Mono Light", sans-serif;
+  font-weight: 80;
+  margin-top: 5px;
+}
+
+.info-box:hover {
+  box-shadow: 0 5px 7px rgba(0,0,0,0.5);
+}
+
+.info-box img {
+  margin-top: 20px;
+  align-items: center;
+}
+
+.info-box p {
+  margin-left: 40px;
+  margin-right: 40px;
+  margin-top: 20px;
+  font-family: "JetBrains Mono Light", sans-serif;
+  font-weight: 80;
+}
+
+.visit-shop {
+  border-radius: 12px;
+  padding: 14px 40px;
+  background: #fff;
+  border: blue solid 2px;
+  margin-top: 20px;
+  transition: 0.4s;
+}
+
+.visit-shop:hover {
+  color: white;
+  background: blue;
+  cursor: pointer;
+}
+
+.join-discord {
+  border-radius: 12px;
+  padding: 14px 40px;
+  background: #fff;
+  border: blue solid 2px;
+  margin-top: 45px;
+  transition: 0.4s;
+}
+
+.join-discord:hover {
+  color: white;
+  background: blue;
+  cursor: pointer;
+}
+
+#modal {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+}
+#modal-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+
+.ok-btn {
+  width: 50px;
+  height: 20px;
+  background: white;
+  color: black;
+  border-radius: 10px;
+  transition: 0.3s;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.ok-btn:hover {
+  color: white;
+  background: black;
+}
+
+.visit-faq {
+  border-radius: 12px;
+  padding: 14px 40px;
+  background: #fff;
+  border: blue solid 2px;
+  margin-top: 65px;
+  transition: 0.4s;
+}
+
+.visit-faq:hover {
+  color: white;
+  background: blue;
+  cursor: pointer;
+}
+
+.news-title {
+  font-family: 'Arial', sans-serif;
+  font-weight: bold;
+  font-size: 28px;
+  margin-top: 100px;
+}
+
+.news-box-container-row-one {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.news-box {
+  margin-left: 30px;
+  margin-right: 30px;
+  margin-bottom: 100px;
+  border-radius: 20px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+  height: 500px;
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: 0.3s;
+}
+
+.news-box h3 {
+  font-family: "JetBrains Mono Light", sans-serif;
+  font-weight: 100;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.news-box p {
+  margin-top: 30px;
+  margin-left: 40px;
+  margin-right: 40px;
+  font-family: "JetBrains Mono Light", sans-serif;
+  font-weight: 100;
+}
+
+.news-box:hover {
+  box-shadow: 0 5px 7px rgba(0,0,0,0.4);
+}
+
+.news-image {
+  border-radius: 10px;
+  margin-left: 40px;
+  margin-right: 40px;
+}
+
+.news-image:hover {
+  box-shadow: 0 5px 7px rgba(0,0,0,0.2);
+}
+
+.legal-conatiner {
+  display: flex;
+  flex-direction: column;
+}
+
+.legal-conatiner p {
+  margin-bottom: 10px;
+  font-family: "JetBrains Mono Light", sans-serif;
+}
+
+.legal-conatiner a {
+  margin-top: 5px;
+  text-decoration: none;
+  font-size: 16px;
+  color: #333;
+  transition: color 0.1s ease;
+  margin-right: 20px;
+  font-family: "JetBrains Mono Light", sans-serif;
+}
+
+.legal-conatiner a:hover {
+  color: #007bff;
+}
+
+.footer {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+}
+
+.footer img {
+  justify-content: left;
+  margin-right: 500px;
+}
+
+.contact-conatiner {
+  display: flex;
+  flex-direction: column;
+  margin-right: 50px;
+  font-family: "JetBrains Mono Light", sans-serif;
+}
+
+.contact-conatiner a {
+  margin-top: 5px;
+  text-decoration: none;
+  font-size: 16px;
+  color: #333;
+  transition: color 0.1s ease;
+  margin-right: 20px;
+  font-family: "JetBrains Mono Light", sans-serif;
+}
+
+.contact-conatiner a:hover {
+  color: #007bff;
+}
+
+.contact-conatiner p {
+  margin-bottom: 10px;
+  font-family: "JetBrains Mono Light", sans-serif;
+}
+
+.links-conatiner {
+  display: flex;
+  flex-direction: column;
+  margin-right: 50px;
+  font-family: "JetBrains Mono Light", sans-serif;
+}
+
+.links-conatiner a {
+  margin-top: 5px;
+  text-decoration: none;
+  font-size: 16px;
+  color: #333;
+  transition: color 0.1s ease;
+  margin-right: 20px;
+  font-family: "JetBrains Mono Light", sans-serif;
+}
+
+.links-conatiner a:hover {
+  color: #007bff;
+}
+
+.links-conatiner p {
+  margin-bottom: 10px;
+  font-family: "JetBrains Mono Light", sans-serif;
+}
+
+.copyright {
+  justify-content: center;
+}
+
+@media only screen and (max-width: 1080px) {
+  .heading {
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    padding: 10px;
+  }
+
+  .top-bar {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .top-bar-btn {
+    margin-top: 10px;
+  }
+
+  .heading img {
+    margin: 0;
+    width: 150px;
+    height: auto;
+  }
+
+  .nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px 0;
+  }
+
+  .nav a {
+    margin: 5px 0;
+  }
+}
