@@ -1,5 +1,5 @@
 # GlitzoriumDE-Website
--> https://glitzorium.de <br>
+-> https://glitzorium.de <br> <br>
 ![Uptime](http://185.223.28.217:3001/api/badge/1/status)
 
 - Es könnte sein das ungenutzte Elemente im Code enthalten sind
